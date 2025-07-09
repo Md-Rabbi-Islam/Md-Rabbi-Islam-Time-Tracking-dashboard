@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root{ 
+    /* Primary */
+    --Purple600: hsl(246, 80%, 60%);
+    --Orange300Work: hsl(15, 100%, 70%);       
+    --Blue300Play : hsl(195, 74%, 62%);    
+    --Pink400Study: hsl(348, 100%, 68%);
+    --Green400Exercise: hsl(145, 58%, 55%);
+    --Purple700Social: hsl(264, 64%, 52%);
+    --Yellow300Selfcare: hsl(43, 84%, 65%);
+    
+    /* Neutral */
+    --Navy950: hsl(226, 43%, 10%);
+    --Navy900: hsl(235, 46%, 20%);
+    --Purple500: hsl(235, 45%, 61%);
+    --Navy200: hsl(236, 100%, 87%);
+
+    /* font  */
+    --ffRubik:"Rubik",sans-serif;
+    --fwLight:300;
+    --fwRegular:400;
+    --fwMiduem:500;
+}
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    font-family: var(--ffRubik);
+    height: 100vh;
+    max-width: 100%;
+    background-color: #ffffff;
+}
+.main-container{
+    background-color: var(--Navy950);
+    margin:2rem auto;
+    max-width: 1440px;
+    height: 100vh;
+}
+.card-container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(4,1fr);
+    align-content: center;
+    grid-template-areas: 
+    "card1 card2 card3 card4"
+    "card1 card5 card6 card7";
+    gap: 1rem;
+    padding: 0 5rem;
+}
+.card-section{
+    background-color: var(--Navy900);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    z-index: 9999;
+    padding-top: 3.5rem;
+}
+.section-1st{
+    grid-area: card1;
+    border-radius: 1rem;
+    padding-top: 0;
+}
+.section-2nd{
+    grid-area: card2;
+    border-radius: 1rem;
+}
+.section-3rd{
+    grid-area: card3;
+}
+.section-4th{
+    grid-area: card4;
+}
+.section-5th{
+    grid-area: card5;
+}
+.section-6th{
+    grid-area: card6;
+}
+.section-7th{
+    grid-area:card7;
+}
+.card{
+    height:80%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position:top -2px right 15px; 
+    background-size: 80px;
+    border-radius: 1rem 1rem 0 0;
+    z-index:-1;
+}
+.work{
+    background-image: url(./images/icon-work.svg);
+    background-color:var(--Orange300Work);
+}
+.play{
+    background-image: url(./images/icon-play.svg);
+    background-color:var(--Blue300Play);
+}
+.study{
+    background-image: url(./images/icon-study.svg);
+    background-color: var(--Pink400Study);
+}
+.exercise{
+    background-image: url(./images/icon-exercise.svg);
+    background-color: var(--Green400Exercise);
+}
+.social{
+    background-image: url(./images/icon-social.svg);
+    background-color: var(--Purple700Social);
+}
+.self-care{
+    background-image: url(./images/icon-self-care.svg);
+    background-color: var(--Yellow300Selfcare);
+}
+.card-bottom{
+    background-color: var(--Navy900);
+    padding: 2rem;
+    border-radius: 1rem 1rem 0 0;
+}
+.card-top-1{
+    background-color: var(--Purple600);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.profile-pic{
+    height: 60px;
+    width: 60px;
+    border: 4px solid hsl(228, 10%, 90%);
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+.previous,.reporter{
+    font-weight: var(--fwRegular);
+    color: hsl(237, 21%, 65%);
+    font-size: 16px;
+}
+.current,.name{
+    font-weight: var(--fwRegular);
+    color:hsl(228, 10%, 90%);
+    font-size: 50px;
+    margin:2rem 0 1rem 0; 
+}
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text{
+    font-size: 18px;
+    font-weight: var(--fwMiduem);
+    color: hsl(228, 10%, 90%);
+}
+.icon:hover{
+    cursor: pointer;
+}
+.name{
+    margin:.5rem 0 3rem 0;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}
+li{
+    padding: .5rem 0;   
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: var(--fwMiduem);
+    color:hsl(237, 21%, 65%);
+}
+a:hover{
+    color: hsl(228, 10%, 90%);;
+   
+}
+ .card-bottom:hover{
+    transition: all .3s ease-in-out;
+    background-color:hsl(235, 19%, 27%);
+}
+.menu-list:hover{
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
